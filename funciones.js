@@ -405,24 +405,26 @@
 
 	/* Funciones resultado ALEATORIO */
 	function fijos() {
-		document.getElementById("bi").innerHTML = Math.floor(Math.random()*2+1);
-		document.getElementById("tri").innerHTML = Math.floor(Math.random()*3+1);
-		document.getElementById("tetra").innerHTML = Math.floor(Math.random()*4+1);
-		document.getElementById("penta").innerHTML = Math.floor(Math.random()*5+1);
+	    var myRdm = Math.random();
+	    document.getElementById("bi").innerHTML    = Math.floor( 2*myRdm + 1);
+	    document.getElementById("tri").innerHTML   = Math.floor( 3*myRdm + 1);
+	    document.getElementById("tetra").innerHTML = Math.floor( 4*myRdm + 1);
+	    document.getElementById("penta").innerHTML = Math.floor( 5*myRdm + 1);
 	}
 
 	function variables() {
+	    var myRdm = Math.random();
 		var a = document.getElementById("a").value;
-			if(a !='') document.getElementById("w").innerHTML = Math.floor(Math.random()*a+1);
+		if(a !='') document.getElementById("w").innerHTML = Math.floor( a*myRdm + 1);
 
 		var b = document.getElementById("b").value;
-			if(b !='') document.getElementById("x").innerHTML = Math.floor(Math.random()*b+1);
+		if(b !='') document.getElementById("x").innerHTML = Math.floor( b*myRdm + 1);
 
 		var c = document.getElementById("c").value;
-			if(c !='') document.getElementById("y").innerHTML = Math.floor(Math.random()*c+1);
+		if(c !='') document.getElementById("y").innerHTML = Math.floor( c*myRdm + 1);
 
 		var d = document.getElementById("d").value;
-			if(d !='') document.getElementById("z").innerHTML = Math.floor(Math.random()*d+1);
+		if(d !='') document.getElementById("z").innerHTML = Math.floor( d*myRdm + 1);
 	}
 	
 	/*Perder focus tras click*/
