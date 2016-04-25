@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type='text/javascript' src="funciones.js"></script>
+<link rel='stylesheet' href='style.css' />
+<link rel='shortcut icon' href='cronomo_icono.ico' />
+	<script type="text/javascript">
+		var estadoCrono=1; /*Estado del cronómetro, 0=no abierto, 1=abierto sin correr, 2=corriendo */
+		var estadoAtras=0; /*Estado de la cuenta atrás, 0=no abierto, 1=abierto sin correr, 2=corriendo */
+	</script>
+
+</head>
+<meta charset="UTF-8">
+<title>Crónomo | Aleatorio</title>    
+<body onkeydown="teclado(event)">
+ 
+    
+    <div id='controles'>
+		<button title='Mostrar nuevos valores aleatorios' onclick="fijos(); variables();">NUEVO ALEATORIO</button>
+    </div> <p>
+    
+    <div id='grupos' style="font-size:40px;"> 
+        <div style='width:15%; height:1px; float:left;'> </div>
+        <div style='width:19%; float:left; text-align:left; '>
+            <p>Pareja: <B><span id="bi"></span></B> </p>   
+            <p>Trío: <B><span id="tri"></span></B></p>
+            <p>Cuarteto: <B><span id="tetra"></span></B></p>
+            <p>Quinteto: <B><span id="penta"></span></B></p>
+        </div>
+        <div style='width:1%; height:1px; float:left;' > </div>
+        <div style='width:50%; float:left;'>
+            <p>Aleatorio entre 1 y <input type="text" id="a" class="casilla" size="1">: <B><span id="w"></span></p></B>
+            <p>Aleatorio entre 1 y  <input type="text" id="b" class="casilla" size="1">: <B><span id="x"></span></B></p>
+            <p>Aleatorio entre 1 y  <input type="text" id="c" class="casilla" size="1">: <B><span id="y"></span></B></p>
+            <p>Aleatorio entre 1 y  <input type="text" id="d" class="casilla" size="1">: <B><span id="z"></span></B></p>
+        </div>
+        <div style='width:10%; height:1px; float:left;' > </div>
+        <div style='clear:both;'> </div>
+
+    </div> 
+    <p>
+    <div id='controles'>
+		<input id='atras' title='Cuenta Atrás' class='boton' type="button" value="Cuenta atrás"> &nbsp;
+		<input id='crono' title='Cronómetro' class='boton' type="button" value="Cronómetro"> &nbsp;
+		<input id='info' title='Más información' class='boton' type="button" value="Info"> 
+    </div>       
+</body>
+</html>

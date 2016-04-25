@@ -1,0 +1,62 @@
+<html>
+<head>
+
+<meta name="description" content="Crónomo es una herramienta educativa que facilita el trabajo autónomo del alumnado en clase mediante la gestión del tiempo y del clima. Está compuesto de un Semáforo y un temporizador (Cronómetro y Cuenta atrás), también comprende un selector de Aleatorios.">
+<meta name="keywords" content="crónomo, cronomo, semáforo, comportamiento, cronómetro online, cronómetro, cronómetro gratis, cuenta atrás online, cuenta atrás, cuenta atrás gratis, atrás, autónomo, trabajo autónomo, herramienta educativa, gestión, tiempo, aleatorio, grupos de, cooperativo, aprendizaje cooperativo, clase">
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type='text/javascript' src="funciones.js"></script>
+<link rel='stylesheet' href='style.css' />
+<link rel='shortcut icon' href='cronomo_icono.ico' />
+	<script type="text/javascript">
+		var estadoCrono=0; /*Estado del cronómetro, 0=no abierto, 1=abierto sin correr, 2=corriendo */
+		var estadoAtras=1; /*Estado de la cuenta atrás, 0=no abierto, 1=pausado, 2=corriendo */
+	</script>
+
+</head>
+<meta charset="UTF-8">
+<title>Crónomo | Cuenta atrás</title>   
+<body onkeydown="teclado(event)">
+	<div id='controles'>
+        <input id='iniciarAtras' title='Iniciar / Pausar / Continuar' type="button" value="INICIAR">	
+		<input id='inicializarAtras' title='Dejar cuenta a cero' type="button" value="INICIALIZAR">
+		<input id='aviso' title='Reproducir tono de aviso' type="button" value="Aviso">
+    <p></p>
+        <input id='cont_mas_10min' title='Sumar 10 minutos al temporizador' type="button" value="+10 min">
+        <input id='cont_mas_2min' title='Sumar 2 minutos al temporizador' type="button" value="+2 min">
+        <input id='cont_mas_30s' title='Sumar 30 segundos al temporizador' type="button" value="+30 s">
+        <input id='cont_menos_30s' title='Restar 30 segundos al temporizador' type="button" value="-30 s">
+	</div>
+
+<table style="text-align:center; border:none">
+	<tr>
+	<td style="width:80%; border:none; align:center">
+		<div id='tiempoAtras'> 
+			00:00
+		</div>
+    </td>
+	<td style="width:20%; border:none;">
+		<div class='hueco'> </div> 
+		<div id='rojo' class='semaforo'> </div>
+		<div class='hueco'> </div>
+		<div id='amarillo' class='semaforo'> </div>
+		<div class='hueco'> </div>
+		<div id='verde' class='semaforo'> </div>
+		<div class='hueco'> </div>
+		<div style='clear:both;'> </div>
+	</td>
+	</tr>
+</table>
+
+<div style='clear:both;'> </div>
+
+    <div id='controles'>
+		<input id='crono' title='Cronómetro' class='boton' type="button" value="Cronómetro"> &nbsp;
+		<input id='aleatorio' title='Aleatorio' class='boton' type="button" value="Aleatorio"> &nbsp;
+		<input id='info' title='Más información' class='boton' type="button" value="Info"> 
+    </div>       
+
+
+</meta>
+</body>
+</html>

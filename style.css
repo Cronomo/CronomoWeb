@@ -1,0 +1,47 @@
+@font-face {
+    font-family: decima;
+    src: url('decima_nova_pro.otf');
+}
+
+body {
+    font-family: decima;
+	text-align: center;
+	background-color: white;
+}
+
+input {
+	font-family: decima;
+}
+
+table, th, td {
+    border: 1px solid black; padding: 5px ; border-collapse: collapse;
+}
+
+.semaforo {
+	border-radius:1000px;  margin: 0 auto;
+}
+
+.casilla {
+	font-size:30px;
+}
+
+.indice_ayuda1 {
+	text-decoration:none; margin-left: 30px; color:#000000;
+}
+.indice_ayuda2 {
+	text-decoration:none; margin-left: 60px; color:#000000;
+}
+
+#controles{
+	text-align:center;
+}
+
+#verde{
+	background-color: #006500;
+}
+#amarillo{
+	background-color: #ff9900;
+}
+#rojo{
+	background-color: #800000;
+}

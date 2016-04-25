@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type='text/javascript' src="funciones.js"></script>
+	<link rel='stylesheet' href='style.css' />
+	<link rel='shortcut icon' href='cronomo_icono.ico' />
+	<script type="text/javascript">
+		var estadoCrono=1; /*Estado del cronómetro, 0=no abierto, 1=abierto sin correr, 2=corriendo */
+		var estadoAtras=0; /*Estado de la cuenta atrás, 0=no abierto, 1=abierto sin correr, 2=corriendo */
+	</script>
+
+</head>
+<meta charset="UTF-8">
+<title>Crónomo | Cronómetro</title>   
+<body onkeydown="teclado(event)">
+
+	<div id='controles' style='text-align:center;'>
+		<input id='iniciarCrono' title='Iniciar / Pausar / Continuar' type="button" value="INICIAR">	
+		<input id='inicializarCrono' title='Dejar cuenta a cero' type="button" value="INICIALIZAR">
+		<input id='aviso' title='Reproducir tono de aviso' type="button" value="Aviso">
+	</div>
+    
+<table style="text-align:center; border:none">
+	<tr>
+		<td style="width:80%; border:none; align:center"><div id='tiempoCrono'> 
+			00:00 
+		</div>
+		</td>
+		<td style="width:20%; border:none;">
+			<div class='hueco'> </div> 
+			<div id='rojo' class='semaforo'> </div>
+			<div class='hueco'> </div>
+			<div id='amarillo' class='semaforo'> </div>
+			<div class='hueco'> </div>
+			<div id='verde' class='semaforo'> </div>
+			<div class='hueco'> </div>
+			<div style='clear:both;'> </div>
+		</td>
+	</tr>
+</table>
+    <div id='controles'>
+		<input id='atras' title='Cuenta Atrás' class='boton' type="button" value="Cuenta atrás"> &nbsp;
+		<input id='aleatorio' title='Aleatorio' class='boton' type="button" value="Aleatorio"> &nbsp;
+		<input id='info' title='Más información' class='boton' type="button" value="Info"> 
+    </div>    
+</meta>
+</body>
+</html>
